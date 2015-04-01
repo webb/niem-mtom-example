@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<nc:Binary
+   xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/"
+   xmlns:xmt-extension="http://example.org/xml-media-types-extension"
+   xmlns:xmt-external="http://example.org/xml-media-types-external"
+   xmlns:xmime="http://www.w3.org/2005/05/xmlmime">
+  <xmt-extension:BinaryObject>
+    <xmt-external:binary
+       xmime:contentType="application/gzip"
+       >H4sIAHGBCVUCAw2QSQEAMAzC/lFTete/sU0AkGAIJ0iKZlgOGRJyFChRoUaDFh1u+M84HnjihTc++OJHGCHiVwaRRBFNDLHEkUaKdPIvJllkk0MueZRRopwK6gMV1dRQSx1ttGing0768zY99NLHGCPGmWCSKebrDLPMscaKdTbYZItt9tsue5xx4pwLLrnimhvun3E8u70TFCIBAAA=</xmt-external:binary>
+  </xmt-extension:BinaryObject>
+  <nc:BinaryCaptureDate>
+    <nc:Date>2014-02-03</nc:Date>
+  </nc:BinaryCaptureDate>
+</nc:Binary>

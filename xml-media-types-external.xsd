@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<schema
+   targetNamespace="http://example.org/xmt-external"
+   xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+   xmlns="http://www.w3.org/2001/XMLSchema">
+
+  <import namespace="http://www.w3.org/2005/05/xmlmime"/>
+
+  <element name="binary" type="xmime:base64Binary"/>
+
+</schema>

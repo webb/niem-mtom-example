@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<schema
+   ct:conformanceTargets="http://reference.niem.gov/niem/specification/naming-and-design-rules/3.0/#ReferenceSchemaDocument"
+   targetNamespace="http://example.org/extension"
+   version="1"
+   xmlns:appinfo="http://release.niem.gov/niem/appinfo/3.0/"
+   xmlns:ct="http://release.niem.gov/niem/conformanceTargets/3.0/"
+   xmlns:xmt-extension="http://example.org/xml-media-types-extension"
+   xmlns:xmt-external="http://example.org/xml-media-types-external"
+   xmlns:nc="http://release.niem.gov/niem/niem-core/3.0/"
+   xmlns:structures="http://release.niem.gov/niem/structures/3.0/"
+   xmlns="http://www.w3.org/2001/XMLSchema"
+   >
+
+  <annotation>
+    <documentation>An XML Schema document for binary data that uses the
+      xmime:contentType attribute, in line with W3C's xml-media-types note at
+      http://www.w3.org/TR/xml-media-types/.</documentation>
+  </annotation>
+
+  <import namespace="http://release.niem.gov/niem/structures/3.0/"/>
+  <import namespace="http://release.niem.gov/niem/niem-core/3.0/"/>
+  <import namespace="http://example.org/xmt-external" appinfo:externalImportIndicator="true">
+    <annotation>
+      <documentation>A namespace applying the xmime:contentType attribute to
+        xs:base64Binary.</documentation>
+    </annotation>
+  </import>
+
+  <element name="BinaryObject" substitutionGroup="nc:BinaryObject"
+           type="xmt-extension:BinaryObjectType" nillable="true">
+    <annotation>
+      <documentation>A container for binary data that supports the
+        xmime:contentType attribute on xs:base64Binary simple
+        content.</documentation>
+    </annotation>
+  </element>
+
+  <complexType name="BinaryObjectType"
+               appinfo:externalAdapterTypeIndicator="true">
+    <annotation>
+      <documentation>A data type for a binary data that supports the
+        xmime:contentType attribute on xs:base64Binary simple
+        content.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="structures:ObjectType">
+        <sequence>
+          <element ref="xmt-external:binary">
+            <annotation>
+              <documentation>A container for base 64 binary that carries the
+                xmime:contentType attribute.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>
